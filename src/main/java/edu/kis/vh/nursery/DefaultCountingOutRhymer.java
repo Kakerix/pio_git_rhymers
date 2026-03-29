@@ -1,10 +1,12 @@
 package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRhymer {
+    private static final int STACK_CAPACITY = 12;
+    private static final int EMPTY_RHYTMER_INDICATOR = -1;
+    private static final int DEFAULT_VALUE = -1;
+    private int[] numbers = new int[STACK_CAPACITY];
 
-    private int[] numbers = new int[12];
-
-    public int total = -1;
+    public int total = EMPTY_RHYTMER_INDICATOR;
 
     public void countIn(int in) {
         if (!isFull())
@@ -12,22 +14,22 @@ public class DefaultCountingOutRhymer {
     }
 
     public boolean callCheck() {
-        return total == -1;
+        return total == EMPTY_RHYTMER_INDICATOR;
     }
 
     public boolean isFull() {
-        return total == 11;
+        return total == STACK_CAPACITY-1;
     }
 
     protected int getTotal() {
         if (callCheck())
-            return -1;
+            return DEFAULT_VALUE;
         return numbers[total];
     }
 
     public int countOut() {
         if (callCheck())
-            return -1;
+            return DEFAULT_VALUE;
         return numbers[total--];
     }
 
