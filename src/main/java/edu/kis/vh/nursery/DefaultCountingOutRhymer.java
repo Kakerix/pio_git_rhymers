@@ -1,5 +1,10 @@
 package edu.kis.vh.nursery;
-
+/*
+        metoda getTotal zwraca najstarsza wartosc w stosie, albo -1 kiedy stos jest pusty
+        metoda callCheck sprawdza czy stos jest pusty
+        metoda isFull sprawdza czy stos jest pelny
+        metody countIn i countOut odpowiednio dodają i usuwają element ze stosu
+*/
 public class DefaultCountingOutRhymer {
     private static final int STACK_CAPACITY = 12;
     private static final int EMPTY_RHYTMER_INDICATOR = -1;
