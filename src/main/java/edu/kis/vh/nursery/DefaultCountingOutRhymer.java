@@ -5,14 +5,8 @@ public class DefaultCountingOutRhymer {
     private static final int EMPTY_RHYTMER_INDICATOR = -1;
     private static final int DEFAULT_VALUE = -1;
     final private int[] numbers = new int[STACK_CAPACITY];
-
-<<<<<<< accessory-hermetization
-    private int[] numbers = new int[12];
-
-    private int total = -1;
-=======
+    
     public int total = EMPTY_RHYTMER_INDICATOR;
->>>>>>> master
 
     public void countIn(int in) {
         if (!isFull())
